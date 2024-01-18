@@ -17,9 +17,7 @@ label = uilabel(fig);
 minM = 0.01;
 maxM = 0.5;
 
-%If your computer is beefy, comment this out and uncomment the other
 mSlider = uislider(fig, 'Value', minM, 'Limits', [minM, maxM], 'Position', [10, 400, 500, 3], 'ValueChangedFcn', @(mSlider, event) updateSolution(event, axes, interval, label));
-%mSlider = uislider(fig, 'Value', minM, 'Limits', [minM, maxM], 'Position', [10, 400, 500, 3], 'ValueChangingFcn', @(mSlider, event) updateSolution(event, axes, interval));
 
 %[xA, xB] = getUnstableManifoldXs(500, 600, 0.285, 0.3, 0.079, 0.071);
 %disp(xA); disp(xB);
