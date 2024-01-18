@@ -1,0 +1,31 @@
+set terminal postscript eps enhanced color font "Helvetica,40"
+#set terminal pdf
+set nokey
+set yrange[0:1]
+set xlabel "m"
+set ylabel "proportion infected habitat A"
+set nokey
+set output "infA-vs-m.eps"
+plot "infA-vs-m.txt" with lines lw 6 lt 1
+set nokey
+set yrange[0:1]
+set xlabel "m"
+set ylabel "proportion infected habitat B"
+set nokey
+set output "infB-vs-m.eps"
+plot "infB-vs-m.txt" with lines lw 6 lt 1
+set nokey
+set border 31 lw 3
+set xrange[0:0.004]
+set yrange[0:1.0]
+set xtics(0,0.002,0.004)
+set ytics(0,0.2,0.4,0.6,0.8,1)
+unset xlabel
+unset ylabel
+#set xlabel "m"
+#set ylabel "proportion infected"
+set nokey
+set output "panel-A.eps"
+plot "infA-vs-m.txt" with lines lw 6 lt 1 lc "#CC0000", "infB-vs-m.txt" with lines lw 9 lt 0 lc "#CC0000"
+
+

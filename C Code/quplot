@@ -1,0 +1,16 @@
+set terminal postscript eps enhanced color font "Helvetica,24"
+#set terminal pdf
+set nokey
+set yrange[0:1]
+set xlabel "time"
+set ylabel "proportion infected habitat A"
+set nokey
+set output "infectedA.eps"
+plot "infectedA.txt" with lines lw 6 lt 1
+set nokey
+set yrange[0:1]
+set xlabel "time"
+set ylabel "proportion infected habitat B"
+set nokey
+set output "infectedB.eps"
+plot "infectedB.txt" with lines lw 6 lt 1

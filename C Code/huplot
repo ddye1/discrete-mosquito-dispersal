@@ -1,0 +1,18 @@
+set terminal postscript eps enhanced color font "Helvetica,40"
+#set terminal pdf
+set border 31 lw 3
+set nokey
+set xrange[0:250]
+set yrange[0:550]
+set xtics (0,100,200)
+set ytics (0,200,400)
+set xlabel "time (days)"
+#set ylabel "population"
+set nokey
+set output "traces1.eps"
+plot "xA1.txt" with lines lw 9 lt 1 lc "#AA0000", "yA1.txt" with lines lw 5 lt 1 lc "#00AA00", "xB1.txt" with lines lw 9 lt 0 lc "#AA0000", "yB1.txt" with lines lw 5 lt 0 lc "#00AA00"
+set output "traces2.eps"
+plot "xA2.txt" with lines lw 9 lt 1 lc "#AA0000", "yA2.txt" with lines lw 5 lt 1 lc "#00AA00", "xB2.txt" with lines lw 9 lt 0 lc "#AA0000", "yB2.txt" with lines lw 5 lt 0 lc "#00AA00"
+set xrange[0:280]
+set output "traces3.eps"
+plot "xA3.txt" with lines lw 9 lt 1 lc "#AA0000", "yA3.txt" with lines lw 5 lt 1 lc "#00AA00", "xB3.txt" with lines lw 9 lt 0 lc "#AA0000", "yB3.txt" with lines lw 5 lt 0 lc "#00AA00"
